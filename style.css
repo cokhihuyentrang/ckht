@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --pdf-dark-blue: #0f2c59;
+    --pdf-light-blue: #00a8cc;
+    --pdf-gray: #f4f6f9;
+    --text-color: #333;
+}
+
+body {
+    background-color: #eef2f7;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-header {
+    background: linear-gradient(135deg, var(--pdf-dark-blue), #123e7a);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.logo-sub {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    color: var(--pdf-gray);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.company-big-title {
+    font-size: 4.0rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo-badge {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    opacity: 0.8;
+}
+.logo-badge span {
+    color: var(--pdf-gray);
+}
+
+.interactive-sections {
+    margin: 40px 0;
+}
+
+.node-content, .sub-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.node-content {
+    padding-left: 20px;
+}
+
+.btn-level-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    background-color: var(--pdf-dark-blue);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    user-select: none;
+    transition: background 0.2s, transform 0.1s;
+}
+.btn-level-1:active { transform: scale(0.98); }
+
+.btn-level-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background-color: #ffffff;
+    color: var(--pdf-dark-blue);
+    font-weight: 600;
+    border-left: 5px solid var(--pdf-light-blue);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    user-select: none;
+    transition: background 0.2s, transform 0.1s;
+}
+.btn-level-2:active { transform: scale(0.99); }
+
+.arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-level-1.active .arrow, .btn-level-2.active .arrow {
+    transform: rotate(180deg);
+}
+
+.text-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 5px;
+    line-height: 1.7;
+    border: 1px solid #cbd5e1;
+}
+.text-box ul { padding-left: 20px; }
+.padding-box { padding: 15px 0; }
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+.data-table th { background-color: var(--pdf-dark-blue); color: white; }
+.data-table tr:hover { background-color: #f1f5f9; }
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 15px 0;
+}
+.img-card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #cbd5e1;
+    text-align: center;
+}
+.img-card img { width: 100%; height: 250px; object-fit: cover; display: block; }
+.img-card p { padding: 10px; font-size: 0.85rem; font-weight: 600; color: #475569; background: var(--pdf-gray); }
+
+.main-footer {
+    background-color: #0b1e3a;
+    color: #cbd5e1;
+    margin-top: 60px;
+}
+
+.footer-animated-banner {
+    background: linear-gradient(135deg, var(--pdf-dark-blue), #123e7a);
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-animated-banner h2 { color: white; font-size: 1.8rem; font-weight: 700; }
+.footer-animated-banner p {
+    color: var(--pdf-light-blue);
+    margin-top: 8px;
+    font-weight: 600;
+    animation: pulseEffect 2s infinite ease-in-out;
+}
+
+@keyframes pulseEffect {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.02); }
+}
+
+.footer-normal-text {
+    padding: 40px 20px 20px;
+    font-size: 0.95rem;
+    line-height: 2;
+}
+
+.footer-normal-text p {
+    margin-bottom: 12px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+
+.footer-normal-text p strong {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #64748b;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+    .company-big-title { font-size: 2.2rem; }
+    .node-content { padding-left: 10px; }
+}
+
+.license-gallery {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #cbd5e1;
+    display: flex;
+    justify-content: center;
+}
+
+.license-card {
+    background: #fafafa;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 10px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+}
+
+.license-card img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.license-card p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+
+.nested-albums {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.album-category-block {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.album-title {
+    font-size: 1rem;
+    color: #0f2c59;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #00a8cc; 
+    font-weight: 700;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
